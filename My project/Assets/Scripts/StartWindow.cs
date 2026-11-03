@@ -3,19 +3,19 @@ using UnityEngine.UI;
 
 public class StartWindow : GenericWindow
 {
-    public Button  continueButton;
-    public Button  newGameButton;
-    public Button  optionButton;
-    
+    public Button continueButton;
+    public Button newGameButton;
+    public Button optionButton;
+
     public bool canContinue = false;
 
     protected override void Awake()
     {
         base.Awake();
 
-        continueButton.onClick.AddListener(OnContinueButton);
-        newGameButton.onClick.AddListener(OnNewGameButton);
-        optionButton.onClick.AddListener(OnOptionButton);
+        continueButton.onClick.AddListener(OnClickContinue);
+        newGameButton.onClick.AddListener(OnClickNewGame);
+        optionButton.onClick.AddListener(OnClickOption);
     }
 
     public override void Open()
@@ -25,17 +25,17 @@ public class StartWindow : GenericWindow
         base.Open();
     }
 
-    public void OnContinueButton()
+    public void OnClickContinue()
     {
-        Debug.Log("OnContinueButton");
+        manager.Open(Windows.Difficulty);
     }
 
-    public void OnNewGameButton()
+    public void OnClickNewGame()
     {
-        Debug.Log("OnNewGameButton");
+        manager.Open(Windows.Keyboard);
     }
 
-    public void OnOptionButton()
+    public void OnClickOption()
     {
         Debug.Log("OnOptionButton");
     }
