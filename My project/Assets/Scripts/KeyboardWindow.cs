@@ -1,8 +1,6 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using NUnit.Framework.Interfaces;
-
 
 public class KeyboardWindow : GenericWindow
 {
@@ -39,11 +37,11 @@ public class KeyboardWindow : GenericWindow
     private void Update()
     {
         blinkTimer += Time.deltaTime;
-        if(blinkTimer > blinkInterval)
+        if (blinkTimer > blinkInterval)
         {
             blinkTimer = 0f;
             isCursorVisible = !isCursorVisible;
-            UpdateInputField(); 
+            UpdateInputField();
         }
     }
 
