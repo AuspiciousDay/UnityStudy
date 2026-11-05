@@ -160,9 +160,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1522758585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37ff3f3ad4654ef4e8e79c89165057f6, type: 3}
+  m_Script: {fileID: 11500000, guid: fe60466a8badf8b4f955e25c9981cfbe, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Practice2
+  m_EditorClassIdentifier: Assembly-CSharp::CSVTest1
 --- !u!1 &1548667480
 GameObject:
   m_ObjectHideFlags: 0
