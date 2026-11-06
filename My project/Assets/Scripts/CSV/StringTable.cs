@@ -33,6 +33,7 @@ public class StringTable : DataTable
     }
 
     public readonly static string Unknown = "키 없음";
+
     public string Get(string id)
     {
         if (!dictionary.ContainsKey(id))
