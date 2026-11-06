@@ -11,5 +11,6 @@ public class CharacterData
     public string Icon { get; set;}
 
     public string StringName => DataTableManager.StringTable.Get(Name);
+    public string StringId => DataTableManager.StringTable.Get(Id);
     public Sprite SpriteIcon => Resources.Load<Sprite>($"Icon/{Icon}");
 }

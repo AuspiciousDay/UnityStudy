@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class UICharacterInfo : MonoBehaviour
 {
+    public TMP_Text textRealName;
     public TMP_Text textName;
     public Image icon;
     public TMP_Text textHp;
@@ -17,6 +18,7 @@ public class UICharacterInfo : MonoBehaviour
     {
         data = null;
         textName.text = string.Empty;
+        textRealName.text = string.Empty;
         textHp.text = string.Empty;
         textAtk.text = string.Empty;
         textDef.text = string.Empty;
@@ -36,7 +38,8 @@ public class UICharacterInfo : MonoBehaviour
         }
 
         this.data = data;
-        textName.text = data.StringName;
+        textName.text = data.StringId;
+        textRealName.text = data.StringName;
         icon.sprite = data.SpriteIcon;
         textHp.text = data.Hp.ToString();
         textAtk.text = data.Atk.ToString();
