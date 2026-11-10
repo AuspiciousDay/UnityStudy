@@ -92,7 +92,7 @@ public class SaveDataV5 : SaveData
 
     public override SaveData VersionUp()
     {
-        var data = new SaveDataV5();
+        var data = new SaveDataV6();
         data.PlayerFirstName = PlayerFirstName;
         data.PlayerLastName = PlayerLastName;
         data.Gold = Gold;

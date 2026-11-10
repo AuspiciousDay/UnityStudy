@@ -1,7 +1,7 @@
 using UnityEngine;
 using Newtonsoft.Json;
 using System;
-public class SaveCharacterData : MonoBehaviour
+public class SaveCharacterData
 {
     public Guid InstanceId { get; set; }
 
@@ -11,7 +11,7 @@ public class SaveCharacterData : MonoBehaviour
 
     public SaveCharacterData()
     {
-        InstanceId = Guid.NewGuid(); // 값이 큰 난수를 리턴
+        InstanceId = Guid.NewGuid();
         CreationTime = DateTime.Now;
     }
 

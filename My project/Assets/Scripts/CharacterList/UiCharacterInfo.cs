@@ -29,8 +29,8 @@ public class UiCharacterInfo : MonoBehaviour
         icon.sprite = data.SpriteIcon;
         icon.enabled = true;
         textName.text = string.Format(FormatString, st.Get("NAME"), data.StringName);
-        textHp.text = string.Format(FormatString, st.Get("TYPE"), data.Hp);
-        textAtk.text = string.Format(FormatString, st.Get("VALUE"), data.Atk);
-        textSpeed.text = string.Format(FormatString, st.Get("COST"), data.Speed);
+        textHp.text = string.Format(FormatString, st.Get("HP"), data.Hp);
+        textAtk.text = string.Format(FormatString, st.Get("ATK"), data.Atk);
+        textSpeed.text = string.Format(FormatString, st.Get("SPEED"), data.Speed);
     }
 }

@@ -33,10 +33,10 @@ public class UiCharacterSlotList : MonoBehaviour
     public readonly System.Predicate<SaveCharacterData>[] filterings =
     {
         (x) => true,
-        (x) => x.CharacterData.Name == DataTableManager.StringTable.Get("CHAR_1_NAME"),
-        (x) => x.CharacterData.Name == DataTableManager.StringTable.Get("CHAR_2_NAME"),
-        (x) => x.CharacterData.Name == DataTableManager.StringTable.Get("CHAR_3_NAME"),
-        (x) => x.CharacterData.Name == DataTableManager.StringTable.Get("CHAR_4_NAME"),
+        (x) => x.CharacterData.Name == "CHAR_1_NAME",
+        (x) => x.CharacterData.Name == "CHAR_2_NAME",
+        (x) => x.CharacterData.Name == "CHAR_3_NAME",
+        (x) => x.CharacterData.Name == "CHAR_4_NAME",
     };
 
     private SortingOptions sorting = SortingOptions.CreationTimeAsscending;

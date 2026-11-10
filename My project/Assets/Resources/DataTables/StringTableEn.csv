@@ -39,3 +39,9 @@ FILTER_EQUIP,Equipment
 FILTER_CONSUMABLE,Consumable
 INVENTORY,Inventory
 ITEM_INFO,Item Info
+CHARACTER_LIST,Character List
+CHARACTER_INFO,Character Info
+HP,Health
+ATK,Attack
+SPEED,Speed
+DEF,Defense
