@@ -1,44 +1,33 @@
-using UnityEngine;
+using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
-using Unity.Collections;
+using UnityEngine;
 
-public class Vector3Converter : JsonConverter<Vector3>
+public class ItemDataConverter : JsonConverter<ItemData>
 {
-    public override Vector3 ReadJson(JsonReader reader, Type objectType, Vector3 existingValue, bool hasExistingValue, JsonSerializer serializer)
+    public override ItemData ReadJson(JsonReader reader, Type objectType, ItemData existingValue, bool hasExistingValue, JsonSerializer serializer)
     {
-        JObject jObj = JObject.Load(reader);
-
-        Vector3 v = Vector3.zero;
-
-        v.x = (float)jObj["X"];
-        v.y = (float)jObj["Y"];
-        v.z = (float)jObj["Z"];
-
-        return v;
-
-        /*
-        {
-            "POSITION" : {
-                "X" : ...,
-                "Y" : ...,
-                "Z" : ...
-            }
-        }
-        */
+        var id = reader.Value as string;
+        return DataTableManager.ItemTable.Get(id);
     }
 
-    public override void WriteJson(JsonWriter writer, Vector3 value, JsonSerializer serializer)
+    public override void WriteJson(JsonWriter writer, ItemData value, JsonSerializer serializer)
     {
-        writer.WriteStartObject();
-        writer.WritePropertyName("X");
-        writer.WriteValue(value.x);
-        writer.WritePropertyName("Y");
-        writer.WriteValue(value.y);
-        writer.WritePropertyName("Z");
-        writer.WriteValue(value.z);
-        writer.WriteEndObject();
+        writer.WriteValue(value.Id);
+    }
+}
+
+public class CharacterDataConverter : JsonConverter<CharacterData>
+{
+    public override CharacterData ReadJson(JsonReader reader, Type objectType, CharacterData existingValue, bool hasExistingValue, JsonSerializer serializer)
+    {
+        var id = reader.Value as string;
+        return DataTableManager.CharacterTable.Get(id);
+    }
+
+    public override void WriteJson(JsonWriter writer, CharacterData value, JsonSerializer serializer)
+    {
+        writer.WriteValue(value.Id);
     }
 }
 
@@ -47,7 +36,6 @@ public class QuaternionConverter : JsonConverter<Quaternion>
     public override Quaternion ReadJson(JsonReader reader, Type objectType, Quaternion existingValue, bool hasExistingValue, JsonSerializer serializer)
     {
         JObject jObj = JObject.Load(reader);
-
         Quaternion q = Quaternion.identity;
         q.x = (float)jObj["X"];
         q.y = (float)jObj["Y"];
@@ -70,6 +58,7 @@ public class QuaternionConverter : JsonConverter<Quaternion>
         writer.WriteEndObject();
     }
 }
+
 
 public class ColorConverter : JsonConverter<Color>
 {
@@ -95,6 +84,36 @@ public class ColorConverter : JsonConverter<Color>
         writer.WriteValue(value.b);
         writer.WritePropertyName("A");
         writer.WriteValue(value.a);
+        writer.WriteEndObject();
+    }
+}
+
+public class Vector3Converter : JsonConverter<Vector3>
+{
+    public override Vector3 ReadJson(
+        JsonReader reader,
+        Type objectType,
+        Vector3 existingValue,
+        bool hasExistingValue,
+        JsonSerializer serializer
+    )
+    {
+        JObject jObj = JObject.Load(reader);
+        Vector3 v = Vector3.zero;
+        v.x = (float)jObj["X"];
+        v.y = (float)jObj["Y"];
+        v.z = (float)jObj["Z"];
+        return v;
+    }
+    public override void WriteJson(JsonWriter writer, Vector3 value, JsonSerializer serializer)
+    {
+        writer.WriteStartObject();
+        writer.WritePropertyName("X");
+        writer.WriteValue(value.x);
+        writer.WritePropertyName("Y");
+        writer.WriteValue(value.y);
+        writer.WritePropertyName("Z");
+        writer.WriteValue(value.z);
         writer.WriteEndObject();
     }
 }

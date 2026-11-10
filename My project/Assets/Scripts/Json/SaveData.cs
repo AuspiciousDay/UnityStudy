@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class SaveData
@@ -67,6 +68,52 @@ public class SaveDataV4 : SaveData
     {
         Version = 4;
     }
+    public override SaveData VersionUp()
+    {
+        var data = new SaveDataV5();
+        data.PlayerFirstName = PlayerFirstName;
+        data.PlayerLastName = PlayerLastName;
+        data.Gold = Gold;
+        return data;
+    }
+}
+
+public class SaveDataV5 : SaveData
+{
+    public string PlayerFirstName { get; set; } = string.Empty;
+    public string PlayerLastName { get; set; } = string.Empty;
+    public int Gold { get; set; } = 100;
+    public List<SaveItemData> ItemList = new List<SaveItemData>();
+
+    public SaveDataV5()
+    {
+        Version = 5;
+    }
+
+    public override SaveData VersionUp()
+    {
+        var data = new SaveDataV5();
+        data.PlayerFirstName = PlayerFirstName;
+        data.PlayerLastName = PlayerLastName;
+        data.Gold = Gold;
+        data.ItemList = ItemList;
+        return data;
+    }
+}
+
+public class SaveDataV6 : SaveData
+{
+    public string PlayerFirstName { get; set; } = string.Empty;
+    public string PlayerLastName { get; set; } = string.Empty;
+    public int Gold { get; set; } = 100;
+    public List<SaveItemData> ItemList = new List<SaveItemData>();
+    public List<SaveCharacterData> CharacterList = new List<SaveCharacterData>();
+
+    public SaveDataV6()
+    {
+        Version = 6;
+    }
+
     public override SaveData VersionUp()
     {
         throw new System.NotImplementedException();

@@ -1,6 +1,6 @@
 using UnityEngine;
 using Newtonsoft.Json;
-using SaveDataVC = SaveDataV4;
+using SaveDataVC = SaveDataV6;
 using System.IO;
 
 public static class SaveLoadManager
@@ -21,7 +21,7 @@ public static class SaveLoadManager
         TypeNameHandling = TypeNameHandling.All,
     };
 
-    public static int SaveDataVersion { get; } = 4;
+    public static int SaveDataVersion { get; } = 6;
     public static SaveDataVC Data { get; set; } = new SaveDataVC();
 
     public static bool Save(int slot = 0)
@@ -66,7 +66,7 @@ public static class SaveLoadManager
         {
             var json = File.ReadAllText(path);
             var dataSave = JsonConvert.DeserializeObject<SaveData>(json, settings);
-            while(dataSave.Version < SaveDataVersion)
+            while (dataSave.Version < SaveDataVersion)
             {
                 var pervVersion = dataSave.Version;
                 dataSave = dataSave.VersionUp();

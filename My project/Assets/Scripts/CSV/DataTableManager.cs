@@ -25,9 +25,9 @@ public static class DataTableManager
         tables.Add(DataTableIds.String, stringTable);
 #endif
 
-        // var itemTable = new ItemTable();
-        // itemTable.Load(DataTableIds.Item);
-        // tables.Add(DataTableIds.Item, itemTable);
+        var itemTable = new ItemTable();
+        itemTable.Load(DataTableIds.Item);
+        tables.Add(DataTableIds.Item, itemTable);
 
         var characterTable = new CharacterTable();
         characterTable.Load(DataTableIds.Character);
