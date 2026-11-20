@@ -128,6 +128,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 838751049}
     m_Modifications:
     - target: {fileID: 1562628079252397118, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
+      propertyPath: m_text
+      value: "\uC544\uC774\uD15C \uC0AD\uC81C"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562628079252397118, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
       objectReference: {fileID: 0}
@@ -262,6 +266,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3910760350685564632, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 55626323}
+    - targetCorrespondingSourceObject: {fileID: 8391183123211046300, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1210464118}
   m_SourcePrefab: {fileID: 100100000, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
 --- !u!224 &55626321 stripped
 RectTransform:
@@ -552,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1245,6 +1252,25 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5414854647229141087, guid: fd25c98d9260c794a802fc6b280f7be8, type: 3}
   m_PrefabInstance: {fileID: 608795275}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &770267704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8391183123211046300, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
+  m_PrefabInstance: {fileID: 1569431481}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &770267708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770267704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe553ca431a34c4da7608216ebbb71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationText
+  stringId: ITEM_CREATE
+  editorLang: 0
 --- !u!1001 &801521492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1714,6 +1740,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056508606}
   m_CullTransparentMesh: 1
+--- !u!1 &1210464114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8391183123211046300, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
+  m_PrefabInstance: {fileID: 55626320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1210464118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210464114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe553ca431a34c4da7608216ebbb71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationText
+  stringId: ITEM_DELETE
+  editorLang: 0
 --- !u!1 &1255812328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,6 +2517,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 838751049}
     m_Modifications:
     - target: {fileID: 1562628079252397118, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
+      propertyPath: m_text
+      value: "\uC544\uC774\uD15C \uC0DD\uC131"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1562628079252397118, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
       objectReference: {fileID: 0}
@@ -2598,6 +2647,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3910760350685564632, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1569431484}
+    - targetCorrespondingSourceObject: {fileID: 8391183123211046300, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 770267708}
   m_SourcePrefab: {fileID: 100100000, guid: 3b20f52615660ee40a919b7c0982fa9d, type: 3}
 --- !u!224 &1569431482 stripped
 RectTransform:
